@@ -1,0 +1,299 @@
+.feature {
+    background-color: $bg-color;
+    color: $font-color;
+}
+
+.subtitle {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    margin: 0 auto;
+    padding-top: 50px;
+    hr {
+        width: 20%;
+    }
+    h3 {
+        text-align: center;
+        font-size: $fz-m;
+        letter-spacing: .1rem;
+    }
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    li {
+        width: 25%;
+        margin: 31px 4.1666%;
+        img {
+            margin: 0 auto;
+        }
+        h4 {
+            text-align: center;
+            font-size: $fz-m;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+/* feature:831 */
+
+@include w831 {
+    .subtitle {
+        width: 60%;
+    }
+}
+
+
+/* feature:768 */
+
+@include w768 {
+    .feature-list {
+        li {
+            width: 27.33333%;
+            margin: 31px 3%;
+        }
+    }
+}
+
+
+/* feature:627 */
+
+@include w627 {
+    .subtitle {
+        width: 80%;
+    }
+}
+
+
+/* feature:575 */
+
+@include w575 {
+    .feature-list {
+        flex-wrap: wrap;
+        li {
+            width: 90%;
+        }
+    }
+}
+
+
+/* feature:475 */
+
+@include w475 {
+    .subtitle {
+        hr {
+            display: none;
+        }
+        h3 {
+            margin: 0 auto;
+        }
+    }
+}
+
+
+/* main-chef */
+
+.main-chef {
+    background-color: #3D1101;
+    color: #E5DDDA;
+    display: flex;
+    align-items: center;
+    img {
+        width: 50%;
+    }
+    .text {
+        width: 40.5%;
+        margin-left: 2%;
+        margin-right: 7.5%;
+        h4 {
+            span {
+                font-size: $fz-m;
+            }
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+/* main-chef:768 */
+
+@include w768 {
+    .main-chef {
+        img {
+            width: 50%;
+            height: 460px;
+        }
+        .text {
+            margin-right: 3%;
+        }
+    }
+}
+
+
+/* main-chef:659 */
+
+@include w659 {
+    .main-chef {
+        flex-direction: column;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .text {
+            margin: 30px 8.3%;
+            width: 91.7%;
+        }
+    }
+}
+
+
+/* comment */
+
+.comment {
+    background-color: $bg-color;
+    color: $font-color;
+    h3 {
+        text-align: center;
+        font-size: $fz-b;
+        padding-top: 50px;
+        padding-bottom: 32px;
+    }
+}
+
+.comment-list {
+    display: flex;
+    padding-bottom: 50px;
+    li {
+        width: 29.33333%;
+        margin: 0 2%;
+        .user {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            margin-right: 4%;
+        }
+    }
+    .text {
+        margin-left: 25.7%;
+        h4 {
+            margin-top: 1rem;
+            text-align: right;
+        }
+    }
+}
+
+
+/* comment-list:604 */
+
+@include w604 {
+    .comment-list {
+        flex-direction: column;
+        li {
+            width: 97%;
+            margin: 0 1.5%;
+        }
+        .text {
+            margin-left: 22%;
+            margin-right: 2.6%;
+        }
+    }
+}
+
+
+/* reserve */
+
+.reserve {
+    background-color: #F6F4F3;
+    color: #634033;
+    h3 {
+        text-align: center;
+        font-size: $fz-b;
+        padding-top: 50px;
+        padding-bottom: 38px;
+    }
+}
+
+.reserve-content {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    form {
+        width: 45%;
+        margin: 0 2.5%;
+    }
+    input {
+        &[type="text"],
+        &[type="number"],
+        &[type="tel"],
+        &[type="email"] {
+            width: 100%;
+            margin-bottom: 12px;
+        }
+        &[type="radio"] {
+            margin-right: 10%;
+        }
+    }
+    label {
+        &[for="yes"],
+        &[for="no"] {
+            display: inline;
+        }
+    }
+}
+
+ ::placeholder {
+    color: #4A4A4A;
+    opacity: 0.5;
+}
+
+.form-btn {
+    margin-top: 34px;
+    text-align: right;
+    .cancel {
+        background-color: #A09E9E;
+        color: #fff;
+        margin-right: 2%;
+    }
+    .submit {
+        background-color: #F56C23;
+        color: #fff;
+    }
+}
+
+
+/* reserve:768 */
+
+@include w768 {
+    .reserve-content {
+        flex-direction: column;
+        padding-left: 2%;
+        padding-right: 2%;
+        img {
+            width: 80%;
+            margin: 0 auto;
+        }
+        form {
+            margin-top: 30px;
+            width: 95%;
+        }
+        .form-btn button[type="submit"] {
+            margin: 0;
+        }
+    }
+}
+
+
+/* reserve:375 */
+
+@include w375 {
+    .reserve-content {
+        img {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}

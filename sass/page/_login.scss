@@ -1,0 +1,93 @@
+.login-main {
+    background-color: $bg-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-title {
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 35px;
+    h3 {
+        font-size: $fz-m;
+        color: #3D1101;
+        text-align: center;
+    }
+}
+
+.login-box {
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+    border-top: 3px solid #FF5E45;
+    width: 307px;
+    form {
+        padding: 5%;
+    }
+    legend {
+        font-size: 18px;
+        color: #3D1101;
+        font-weight: 700;
+        text-align: center;
+    }
+    label {
+        color: #3D1101;
+        font-family: "微軟正黑體";
+    }
+    input {
+        width: 100%;
+    }
+    #password {
+        margin-bottom: 0;
+    }
+    a {
+        font-family: "微軟正黑體";
+        font-size: $fz-s;
+        color: #FF5E45;
+        &:hover {
+            color: rgb(255, 153, 69);
+        }
+    }
+}
+
+.login-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    button {
+        &[type="button"] {
+            width: 45%;
+            background: rgba(0, 0, 0, 0.35);
+        }
+        &[type="submit"] {
+            width: 45%;
+            background: #F56C23;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.useFontAwesomeFamily::placeholder {
+    /* Most modern browsers */
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 900;
+}
+
+
+/* login:480 */
+
+@include w480 {
+    .login-btn button[type="submit"] {
+        margin-top: 0;
+    }
+}
+
+
+/* login:400 */
+
+@include w400 {
+    .login-box {
+        width: 90%;
+    }
+}
